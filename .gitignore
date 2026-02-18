@@ -23,6 +23,7 @@ venv/
 data/processed/
 data/interim/
 data/features/
+data/
 
 # Model files
 

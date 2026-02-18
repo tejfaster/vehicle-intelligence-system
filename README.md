@@ -1,106 +1,181 @@
-# Vehicle Failure, Value, and Regional Intelligence System
-
-## Project Overview
-
-This project builds an industry-style vehicle intelligence system to analyze vehicle population, predict failure risk, and generate regional vehicle insights using real-world datasets.
-
-The system will evolve incrementally following industry development practices, starting with data understanding and progressing toward machine learning models and automated pipelines.
+# Vehicle Failure & Regional System Stress Intelligence (V1)
 
 ---
 
-## Objectives
+## Project Vision
 
-The project focuses on three core intelligence areas:
+This project builds a Vehicle Failure & Regional System Stress Intelligence Platform designed to analyze how different regions affect vehicle systems and component-level failure risk.
 
-* Failure Intelligence
-  Analyze maintenance data to identify and predict failure risk.
+The system models:
 
-* Regional Intelligence
-  Analyze vehicle population and fuel distribution across countries.
+* Component-level failures
+* System-level stress
+* Regional environmental influence
+* Risk comparison across countries
 
-* Value Intelligence
-  Analyze vehicle characteristics and trends affecting vehicle value.
-
----
-
-## Current Phase
-
-Phase 0 — Project Initialization
-
-Completed:
-
-* Project initialized
-* Repository structure created
-* Datasets collected
-
-Next Phase:
-
-Phase 1 — Data Understanding
-Load datasets, analyze structure, and document schema.
+This is Version 1 (V1) of a larger Vehicle Intelligence System.
 
 ---
 
-## Current Project Structure
+## V1 Objective
 
-```
-vehicle-intelligence-system/
-│
-├── README.md
-├── requirements.txt
-│
-├── data/
-│   └── raw/
-│       ├── estat_road_eqs_carpda.tsv.gz
-│       ├── estat_road_eqs_carmot.tsv.gz
-│       ├── predictive_maintenance.csv
-│       └── vehicle_population_data.csv
-│
-└── notebooks/
-```
+To design and implement a structured analytical model that:
+
+1. Defines vehicle components and systems
+2. Models system stress based on regional conditions
+3. Estimates component-level failure probability
+4. Produces regional vehicle risk insights
 
 ---
 
-## Datasets
+## Core Modeling Layers
 
-### Eurostat Vehicle Dataset
+### Layer 1 — Component Level
 
-Provides:
+Each vehicle contains the following component groups:
 
-* Country-level vehicle population
-* Fuel type distribution
-* Multi-year vehicle statistics
+Power System:
 
-Files:
+* Engine / Motor
+* Battery
+* Transmission
+* Cooling System
+* Fuel System
 
-* estat_road_eqs_carpda.tsv.gz
-* estat_road_eqs_carmot.tsv.gz
+Motion System:
+
+* Suspension
+* Brakes
+* Steering
+* Wheel Assembly
+* Drivetrain
+
+Control System:
+
+* ECU
+* Sensors
+* Electrical Wiring
+* ADAS (if applicable)
+* Infotainment
+
+Structural System:
+
+* Chassis
+* Body Frame
+* Safety Systems
+* Corrosion-sensitive areas
 
 ---
 
-### Predictive Maintenance Dataset
+### Layer 2 — System Stress Model
 
-Provides:
+Each system receives a stress score based on usage and environmental conditions.
 
-* Operational sensor data
-* Failure labels
-* Machine condition indicators
+Example:
 
-File:
+Power System Stress =
+f(temperature, load, battery_age, usage_intensity)
 
-* predictive_maintenance.csv
+Motion System Stress =
+f(road_quality, traffic_density, load_weight)
+
+Control System Stress =
+f(electronic_complexity, humidity, voltage_fluctuation)
+
+Structural System Stress =
+f(climate, coastal_exposure, corrosion_factor)
 
 ---
 
-### Vehicle Population Dataset
+### Layer 3 — Regional Stress Influence
 
-Provides:
+Each region will be defined by environmental attributes:
 
-* Regional vehicle counts
-* Vehicle population trends
+* Average temperature
+* Humidity index
+* Road quality score
+* Traffic density
+* Coastal factor
+* Altitude
 
-File:
+These regional variables influence system stress levels.
 
-* vehicle_population_data.csv
+---
+
+## Expected Outputs (V1)
+
+* Component-level failure probability
+* System-level stress index
+* Regional vehicle risk score
+* Comparative regional risk analysis
+
+---
+
+## Data Requirements (V1)
+
+To implement V1, we require:
+
+### Required Dataset
+
+A vehicle-level dataset containing:
+
+* vehicle_id
+* make
+* model
+* year
+* fuel_type
+* region
+* mileage or usage intensity
+
+Optional but beneficial:
+
+* component failure records
+* maintenance logs
+* warranty claims
+* defect counts
+
+---
+
+### Regional Dataset Requirements
+
+A region-level dataset containing:
+
+* region_id
+* average temperature
+* humidity index
+* road quality score
+* traffic density
+* coastal factor
+
+---
+
+## Data Strategy
+
+Step 1:
+Search for real-world datasets that match the above structure.
+
+Step 2:
+If no complete dataset exists, simulate a realistic multinational vehicle fleet dataset using controlled modeling assumptions.
+
+Simulation will only be used if real multi-region operational vehicle datasets are not available.
+
+---
+
+## Development Roadmap (V1)
+
+Phase 1 — Dataset Identification
+Phase 2 — Data Understanding
+Phase 3 — System Stress Modeling
+Phase 4 — Failure Probability Modeling
+Phase 5 — Regional Risk Analytics
+Phase 6 — Reporting & Visualization
+
+---
+
+## Current Status
+
+V1 Design Defined
+Dataset Search Starting
 
 ---
 
@@ -109,27 +184,9 @@ File:
 Python
 Pandas
 NumPy
-Jupyter Notebook
+Scikit-learn (if ML used)
+Matplotlib / Seaborn
 
 ---
 
-## Development Approach
-
-This project follows an incremental industry-style development process:
-
-Phase 0 — Initialization
-Phase 1 — Data Understanding
-Phase 2 — Data Processing
-Phase 3 — Feature Engineering
-Phase 4 — Model Development
-Phase 5 — Pipeline Development
-Phase 6 — Deployment
-
-Documentation and system components will grow progressively with each phase.
-
----
-
-## Project Status
-
-Current Phase: Phase 0 — Initialization
-Next Phase: Phase 1 — Data Understanding
+End of V1 README
